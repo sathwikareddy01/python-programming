@@ -1,0 +1,8 @@
+name=input("person name")
+address=input("person address")
+email=input("person email")
+phonenumber=input("person phonenumber")
+print(name)
+print(address)
+print(email)
+print(phonenumber)
