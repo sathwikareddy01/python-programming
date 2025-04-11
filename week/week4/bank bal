@@ -1,0 +1,59 @@
+def credit(bal,trans,amt):
+    bal+=amt
+    trans.append(amt)
+    print(amt,"credited successfully")
+    return bal,trans
+
+def debit(bal,trans,amt):
+    if bal<amt:
+        print("insufficient balance")
+    else:
+        bal-=amt
+        trans.append(amt)
+        print(amt,"debited successfully")
+    return bal,trans
+    
+def showbalance(bal):
+    print("show balance:",bal)
+    
+def lastfivetransaction(transaction):
+    print(transaction,"transaction")
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bal=0
+trans=[]
+while (True):
+    print("1.credit")
+    print("2.debit")
+    print("3.show balance")
+    print("4.last 5 transactions")
+    print("5.exit")
+    
+    choice=int(input("enter the choice"))
+    
+    if choice==1:
+        amt=int(input("enter the amt"))
+        bal,trans=credit(bal,trans,amt)
+    elif choice==2:
+        amt=int(input("enter the amt"))
+        bal,trans=debit(bal,trans,amt)
+    elif choice==3:
+        showbalance(bal)
+    elif choice==4:
+        lastfivetransaction(trans)
